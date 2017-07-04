@@ -20,7 +20,8 @@
     "schema": "typescript-json-schema packages/electron-builder/tsconfig.json Config --out packages/electron-builder/scheme.json --noExtraProps --useTypeOfKeyword --strictNullChecks --titles --required",
     "jsdoc": "ts2jsdoc packages/electron-builder-http packages/electron-updater packages/electron-builder packages/electron-publish",
     "jsdoc2md": "node packages/jsdoc2md.js",
-    "api": "yarn jsdoc && yarn jsdoc2md"
+    "api": "yarn jsdoc && yarn jsdoc2md",
+    "postinstall": "yarn compile"
   },
   "//": "repository must be specified otherwise conventional-changelog will use forked repo (currently cloned)",
   "repository": "electron-userland/electron-builder",
